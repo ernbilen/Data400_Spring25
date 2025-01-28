@@ -1,4 +1,4 @@
-# DATA 400: Capstone in Data Analytics (Fall 2024) #
+# DATA 400: Capstone in Data Analytics (Spring 2025) #
 
 |  | [Eren Bilen](http://ernbilen.github.io) |
 |--------------|--------------------------------------------------------------|
@@ -11,7 +11,7 @@
 * Office hours also available by appointment.
 * **QRA:** Derek Chibbaro [chibbard@dickinson.edu](mailto:chibbard@dickinson.edu)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Quang Nguyen [nguyenqm@dickinson.edu](mailto:nguyenqm@dickinson.edu)		   
-* **QRA Office Hours:** TBA
+* **QRA Office Hours:** <br> Derek, Monday 7-8:30p @Althouse 206 <br> Quang, Wednesday 8-9:30p @Rector 1311
 
 ## Course description ##
 
