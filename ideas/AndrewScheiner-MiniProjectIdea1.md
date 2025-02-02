@@ -1,4 +1,4 @@
-## Andrew Scheiner Mini Project Idea
+## Andrew Scheiner Mini Project Idea #1
 ### Topic
 The topic I am choosing to research for my mini-project is the [availability of computer science education](https://advocacy.code.org/report-data/) for middle school students across the United States. One reason why I am incredibly interested in this topic because for my educational research class, I wrote a research paper on the importance of increasing block-based coding usage in middle school classrooms.
 ### Collecting the Data
