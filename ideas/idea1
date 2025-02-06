@@ -1,0 +1,49 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "c8b13ffe-4501-4667-b045-f931e50e5640",
+   "metadata": {},
+   "source": [
+    "# Paul Florio Idea 1\n",
+    "## Early Education Impacts on Future Economic Success\n",
+    "\n",
+    "My first idea is centered around the impact of how a decision early on in a person's life of attending early education systems can impact their potential economic impacts when they reach the workforce. From there, by using the results of the models, I hope to be able to explain some discrepancies that appear and how to solve them.\n",
+    "\n",
+    "I plan to get the data for this project from a couple of sources. One of the more well-known sources for this project would simply be using the US census data since it is available to the public and does deep categorizations of demographics within the data. The specific source I am using with the the census would be a survey called the \"American Community Survey\". Another great source that I will be using is from the National Center for Educational Statistics (NCES) which provides a broad range of data regarding education in the US. The specific data I would use would come from the Early Childhood Longitudinal Study (ECLS) which is a program that collects important information about children’s knowledge, skills, and educational experiences. I may find other sources as needed as I move along with the project but these are the main two I have identified for now.\n",
+    "\n",
+    "https://www.census.gov/programs-surveys/acs/data.html\n",
+    "https://nces.ed.gov/ecls/dataproducts.asp#K-5\n",
+    "\n",
+    "In terms of what I would do with the data, there is a lot of potential knowing that these databases are created from very relaible sources. They have access to some of the most diverse demographics that many other data sources would struggle to obtain. Knowing this, there are a lot of characteristics like age group, current economic status, location, and many others that may influence the outcome of whatever model I create. As someone who loves statistics and has a deep understanding of the subject, being able to have access to the census of the US versus a simple sample should streamline the results of the models and be able to give much more accurate predictions.\n",
+    "\n",
+    "One of the models I am planning to use with this project will use survival analysis to measure how long it takes individuals to reach key economic milestones based on early childhood education exposure. Additionally, I plan to be using propensity score matching to help isolate the effect of early education by comparing similar individuals who did and did not attend high-quality early education programs. I think it'll also be necessary to include some regression models that can also be used to predict income and employment probability while controlling for socioeconomic factors.\n",
+    "\n",
+    "My hope with the models that I create would be to stress the importance of early childhood education and why funding for these early education centers is important in the long-term success of students. Without doing much research, it is obvious that early education positively affects economic status later in life, but knowing where differences in those success rates is where I want to explore. Being able to spot these differences can tell a story about particular regions or demographics and using this knowledge can lead to future changes.\n",
+    "\n",
+    "Ethical considerations for this project would have to include ensuring data privacy, particularly when using longitudinal datasets that track individuals over time. It is also important to avoid overgeneralization, as the impact of early education may vary based on socioeconomic, racial, and geographic factors that influence enrollment for particular individuals. We also want to make sure that even if we find that certain programs should be funded more, that does not conclude that other areas of education need to be funded less because of the project results. Also, bias in data collection should be addressed, as historical disparities in education quality may skew results."
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
