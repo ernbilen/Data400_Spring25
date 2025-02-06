@@ -1,8 +1,8 @@
 # DATA 400 - Ashley Kim
 ### Mini Project #2
-#### Examining the Relationship Between Payroll and Team Performance in Major League Baseball
+##### Research Question: How Does Payroll Affect Team Performance in Major League Baseball?
 
-### Research Question
+
 It started with a question I had: “Do richer teams (that can pay for more "valuable players") perform better?” Unlike other sports and leagues, Major League Baseball (MLB) does not have a salary cap, meaning teams can spend as much as their budget allows when building their rosters. Given the absence of a salary cap in MLB, this research investigates whether higher payrolls are associated with improved team performance, as measured by win percentage. This project aims to explore the relationship between team payroll and performance in MLB over the past decade (2014–2024). If a relationship is observed, the findings may have various implications for stakeholders. Team owners and executives might consider how payroll investments are linked to team performance when making financial decisions related to player acquisitions. For players and agents, understanding the potential connection between payroll and team success could influence how they approach contract negotiations and value players' contributions. Additionally, if significant disparities in payroll exist between teams, this could raise discussions about competitive fairness and its impact on the overall league structure.
 
 
