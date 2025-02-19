@@ -66,6 +66,7 @@ all_f1_data<-select(all_f1_data,
                     session_type, session_name, date_start, year, 
                     air_temperature, humidity, pressure, rainfall, track_temperature, wind_direction,
                     wind_speed, scope, message)
+
 #Create df of messages with various conditions to find wording for crashes
 unique_message<- filter(all_f1_data, session_type!="Practice", str_detect(message,"COLLISION"),!str_detect(message,"FIA STEWARDS:"))
 
@@ -79,7 +80,7 @@ all_f1_data$crash <- as.factor(all_f1_data$crash)
 #Find different weather conditions to separate data on
 unique_weath <- unique(all_f1_data$rainfall)
 
-hist(all_f1_data$wind_speed, main="Wind Speed Frequencies", xlab ="Wind Speed", col="light pink")
+hist(all_f1_data$wind_speed, main="Wind Speed Frequencies", xlab ="Wind Speed", col="red")
 max(all_f1_data$wind_speed)
 
 
@@ -111,7 +112,7 @@ barplot(countsdf$count,
         main = "Barplot of Counts for Different Conditions",
         xlab = "Category",
         ylab = "Count",
-        col = c("skyblue", "purple"),
+        col = c("red", "blue"),
         border = "black")
 
 #Predictions
@@ -158,8 +159,7 @@ roc_log_pred_clear <- roc(clear_validation$crash, crash_clear_pred_class,plot=TR
                     percent =TRUE, xlab="False Positive Percentage", ylab="True Positive Percentage")
 auc_value_clear <- auc(roc_log_pred_clear)
 auc_value_clear
-roc_log_pred$thresholds[which.max(roc_log_pred$sensitivities+roc_log_pred$specificities)]
-length(which(clear_validation$crash==1))
+
 
 ##Rainy
 ###Cleaning the Columns
@@ -204,6 +204,15 @@ roc_log_pred_rainy <- roc(rainy_validation$crash, crash_rainy_pred_class,plot=TR
                           percent =TRUE, xlab="False Positive Percentage", ylab="True Positive Percentage")
 auc_value_rainy <- auc(roc_log_pred_rainy)
 auc_value_rainy
-roc_log_pred$thresholds[which.max(roc_log_pred$sensitivities+roc_log_pred$specificities)]
 
 
+
+
+clear_crash <- filter(clearDFClean, crash==1)
+clear_safe <- filter(clearDFClean, crash==0)
+hist(clear_crash$humidity, main=" Humidity Distribution Clear Crashes", ylab = "Frequency", xlab= "Humidity", col= "blue")
+hist(clear_safe$humidity, main=" Humidity Distribution Clear Safe Drives ", ylab= "Frequency", xlab= "Humidity", col="red")
+hist(clear_crash$pressure, main="Pressure Distribution Clear Crashes", ylab = "Frequency", xlab= "Pressure", col= "blue")
+hist(clear_safe$pressure, main="Pressure Distribution Clear Safe Drives ", ylab= "Frequency", xlab= "Pressure", col="red")
+hist(clear_crash$wind_speed, main="Wind Speed Distribution Clear Crashes", ylab = "Frequency", xlab= "Speed (m/h)", col= "blue", xlim= c(0, 10))
+hist(clear_safe$wind_speed, main="Wind Speed Distribution Clear Safe Drives ", ylab= "Frequency", xlab= "Speed (m/h)", col="red")
