@@ -26,13 +26,13 @@ The data is a CSV file that contains shipping information from Notions Marketing
 
 ---
 
-# What is in the Notebook
+# What is in the Notebook?
 
 The Jupyter Notebook contains the actual model used and other graphs that help analyze our findings. We imported packages and read in the CSV to make a strong model, which gave us results to then interpret with the use of meaningful graphs.
 
 ---
 
-# What is the Poster
+# What is the Poster?
 
 The poster was created to explain our process and results at a level for individuals who are not specialized within our field. It helps viewers better understand how everything comes together. This poster was put on display for the students, faculty, and other attendees at the Poster Symposium hosted by Dickinson College.
 
