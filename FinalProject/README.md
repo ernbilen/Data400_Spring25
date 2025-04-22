@@ -1,8 +1,9 @@
 # Introduction to the Repository
 
 In this repository, a semester-long project was developed and documented. Our repository was created to make a model for forecasting in the shipping and distribution industry. A summary of what our repository is about is provided below.
-![Global Logistics and Transportation](https://www.paystarlogistics.com/wp-content/uploads/2022/08/global-logistics-transportation.jpg)
-
+---
+![AdobeStock_265501963-2048x1365-panorama-c1c24bc67947835803e6363bc086008e-6009a52a9e077](https://github.com/user-attachments/assets/43a8d729-60ea-485f-bd3f-bb9beeeac432)
+---
 > “Analyzing shipping data from Notions Marketing, we created a model to predict shipping rate timings using forecasting models. Shipping rate forecasting involves predicting future shipping rates based on historical data, market trends, and various economic indicators. These forecasts are essential for planning and decision-making, helping companies anticipate market changes and make informed decisions about fleet management, chartering, and pricing strategies.”
 
 ---
