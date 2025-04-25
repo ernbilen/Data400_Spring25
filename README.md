@@ -1,68 +1,37 @@
-# DATA 400: Capstone in Data Analytics (Spring 2025) #
-
-|  | [Eren Bilen](http://ernbilen.github.io) |
-|--------------|--------------------------------------------------------------|
-| Email | [bilene@dickinson.edu](mailto:bilene@dickinson.edu) |
-| Office | Althouse 104 |
-| Office Hours | [calendly](https://calendly.com/bilene/office-meeting) <br> T 2:30-4pm, <br> W 11:30a-1pm|
-| GitHub | [ernbilen](https://github.com/ernbilen) |
-
-* **Meeting day/time**: T-F S1 9-10:15am, S2 10:30-11:45am @Althouse 206
-* Office hours also available by appointment.
-* **QRA:** Derek Chibbaro [chibbard@dickinson.edu](mailto:chibbard@dickinson.edu)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Quang Nguyen [nguyenqm@dickinson.edu](mailto:nguyenqm@dickinson.edu)		   
-* **QRA Office Hours:** <br> Derek, Monday 7-8:30p @Althouse 206 <br> Quang, Wednesday 8-9:30p @Rector 1311
-
-## Course description ##
-
-This capstone course aims to provide students a strong foundation for the must-have skills needed towards becoming a successful and ethical data analyst. The course must be completed successfully as the final core requirement for degree in data analytics. During the course, we will revisit topics that you have learned in your prior core data analytics courses. By the end of the course, you will produce a clear output: a data science project showcasing your data analysis skills. You should consider this course and the project as an opportunity to practice your oral presentation, writing, and time management skills. Additionally, we will discuss strategies that will help you navigate the job market for data analytics.
+<img src="https://upload.wikimedia.org/wikipedia/en/0/03/National_Basketball_Association_logo.svg" width="150"/>
 
 
-## Course Objectives and Learning Outcomes ##
 
-* You will learn how to implement a data science project under a feasible timeline. In the process, you will learn skills such as:
-	* Develop research questions systematically that are feasible to implement in a reasonable timeline
-	* Evaluate what makes a research question good or bad
-	* Distinguish correlations from causality, outline methodology and concisely explain results, and characterize the limitations and uncertainty of statistical inference and machine learning algorithms
-	* Develop the ability to write about and express an opinion on an ethical issue in data analytics for a broad general and/or technical audience
-* You will learn how to use software to increase your research productivity and learn coding and collaboration techniques such as:
-	* Best practices for Python coding ([PEP 8](https://www.python.org/dev/peps/pep-0008/))
-	* Writing modular code with functions and objects
-	* Creating clear docstrings for functions and variables
-	* Collaboration tools for writing code using [Git](https://git-scm.com/) and [GitHub.com](https://github.com/).
-* You will get prepared for the job market in data analytics:
-	* You will have a well prepared application package prepared including a clean resume, data/projects repo showcasing your skills
-	* Gain interview skills, revisit technical concepts you have learned in your previous data analytics courses
+# 🏀 NBA Clutch Time Efficiency Analysis
 
+## Evaluating Feature Importance for Predicting Clutch Scoring Efficiency Gain  
+Can we determine which players will rise to the occasion when it matters most?
 
-## Grades ##
+## 📊 Overview  
+What makes a player "clutch" has long been debated by fans, analysts, and front offices alike. The challenge lies in identifying the characteristics that predict whether a player will perform under pressure or falter in key moments. This project aims to define what influences clutch scoring efficiency and uncover which players consistently elevate their performance in the final moments of close games.
 
-Grades will be based on the categories listed below with the corresponding weights.
+We explore several key questions: Which features are associated with changes in clutch scoring efficiency? Who are the top 15 most efficient clutch-time risers based on scoring efficiency gain? Which players quietly perform efficiently in clutch situations despite minimal increases in shot attempts? Who are the go-to scorers that shine with high usage in crunch time? And who are the volume shooters that increase their shot attempts but not their efficiency?
 
-Assignment                   | Points |   Percent  |
------------------------------|--------|------------|
-Research Questions  				 |   15   |		 15.0%   |
-Mini-project presentation				 |   15   |		 15.0%	 |
-Progress presentation        |   15   |		 15.0%	 |
-Data + ReadMe Guide          |   15   |		 15.0%	 |
-Poster session               |   15   |		 15.0%	 |
-Final presentation           |   15   |		 15.0%	 |
-Class Participation          |   10   |    10.0%   |
-**Total points**             | **100** | **100.0%** |
+## 📭 Data Collection  
+The data for this project comes from NBA.com, retrieved using the [nba_api](https://github.com/swar/nba_api) package. We compiled regular and clutch-time player statistics for every regular season game between 2000 and 2023. After merging the datasets for each season, we filtered out players lacking both regular and clutch stats or those with fewer than 30 minutes and 20 field goal attempts in clutch-time.  
 
-* **Assignments:** Your assignments will be submitted through Github. Each of you will maintain an individual Github repo where you upload your reports, presentations, data guide, and code. This will be useful when you apply for data analyst jobs.
-	* You are encouraged to collaborate with your peers. However, you must understand and be able to explain **all** parts of the code you are submitting. I **DO** want to see each of you learning how to code solutions so that you could do it later on your own.
-	* Your assignments, both written and code portions, will be turned in via a pull request from your private [GitHub.com](https://git-scm.com/) repository which is a fork of the class master repository on my account. (You will need to set up a GitHub account if you do not already have one.)
-	* Assignments will be due on the second class meeting of the week, with dates listed in the pdf version of this syllabus, unless otherwise specified. Late assignments will not be graded.
+We then normalized player stats to allow for fairer comparisons. Key derived variables included per-minute and per-FGA scoring rates for both regular and clutch time, along with their differences (PTS_delta and PTS_per_FGA_delta). We also calculated shot volume changes (FGA_per_min_delta), as well as changes in assists, turnovers, and field goal percentage.
 
+## 🏭 Model Architecture  
+To identify the most important predictors of clutch scoring efficiency gain (PTS_per_FGA_delta), we used a Random Forest Regression Model. The model was developed using an 80/20 train-test split. We employed [GridSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html) from [scikit-learn](https://scikit-learn.org/stable/) to fine-tune hyperparameters. Model performance was evaluated using R², RMSE, and MSE.
 
-## Helpful Links ##
+To explain the model’s predictions, we used SHAP values to understand each feature’s contribution to the output. We also created an actual vs. predicted values graph to visually inspect how well the model performed. These tools allowed us to interpret both the effectiveness of our predictive model and the relative importance of each feature.
 
-* [The Effect ](https://theeffectbook.net) by Nick Huntington-Klein
-* [QuantEcon](https://quantecon.org)
-* [Notes on Machine Learning & Artificial Intelligence](https://chrisalbon.com) by Chris Albon
+## 💎 Key Insights  
+Our model highlighted FG_PCT_clutch (field goal percentage during clutch time) as the most impactful predictor of scoring efficiency gain, which reinforces the importance of shooting accuracy when it matters most. FG_PCT_overall and PLUS_MINUS_clutch followed closely as influential indicators. The Random Forest Model explained over 53% of the variation in PTS_per_FGA_delta, suggesting that while clutch performance has intangible elements, regular season stats can provide meaningful insight.
 
+## 💡 Implications  
+Using predictive models to evaluate clutch performance introduces limitations, such as ignoring psychological factors like confidence or pressure. There is also the risk of misjudging a player by numbers alone, without considering context, role, or sample size.  
 
-## Reasonable Accommodations for Students with Disabilities: ##
+However, these models can be valuable tools. Coaches and analysts may use them to optimize late-game strategy or uncover hidden clutch talent. Scouts and front offices can combine data-driven insights with traditional evaluations to make better-informed decisions. For fans and media, the findings challenge long-standing narratives about what it means to be "clutch."
 
-If you have any condition, such as a physical or learning disability, which will make it difficult for you to carry out the work as I have outlined it or which will require academic accommodations, please notify me through email AND in person with the appropriate documentation during the first two weeks of the course.
+## 📋 Future Work  
+Future improvements include testing other machine learning models to compare performance, incorporating playoff data to explore postseason trends, and analyzing financial data like contract values in relation to clutch-time performance.
+
+## 🎓 Credits  
+This project was completed for Dickinson College’s DATA400 (Capstone in Data Analytics, Spring 2025). It was developed by Michael Freda and Mahim Dahal, under the guidance of Professor Eren Bilen.
