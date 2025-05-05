@@ -26,9 +26,12 @@ This study aims to quantitatively assess these elements and uncover key factors 
 
 ## Project Recreation
 
-- **File structure:**
-  - **data/** — Raw and cleaned datasets  
-  - **notebooks/** — Jupyter notebooks for exploration, modeling, and analysis  
+- **File structure:** All of the documents related to this project lies within the 'Final Project' folder
+  - **Raw Dataset** — The raw dataset file
+  - **cleaned_airbnb.xlsx** — The cleaned dataset file
+  - **Data400 Final Project.ipynb** — The Jupyter notebook that holds the Python code that runs the modeling and analysis for the project
+  - **ReadMe.md** — The ReadMe file
+  - **Data400 - Final Presentation.pptx** — The Powerpoint which compiles the results and discussion of the project
 
 - **Recreation steps:** 
   - **Step 1:** Download or clone the project files
