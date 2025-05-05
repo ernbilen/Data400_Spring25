@@ -10,56 +10,55 @@
 │   └── Hyperparameter tuning
 └── README.md
 
-Same Product, Different Price:
-A Comparative Study of Retail Pricing Strategies
+Same Product, Different Price: A Comparative Study of Retail Pricing Strategies
 I. Overview:
-- This project investigates how the same branded groceries products are
-priced differently across major U.S. retailers, specifically Walmart,
-Target, and Giant. By analyzing pricing patterns, the study aims to
-uncover whether certain stores consistently offer lower/higher prices,
-and if pricing varies by product category or unit size. The finding may
-inform consumer behavior insights and shed light on each store’s
+-   This project investigates how the same branded groceries products are priced differently across major U.S. retailers, specifically Walmart, Target, and Giant. By analyzing pricing patterns, the study aims to
+uncover whether certain stores consistently offer lower/higher prices, and if pricing varies by product category or unit size. These findings may inform consumer behavior insights and shed light on each store’s
 pricing strategy.
+
 II. Directory Structure
 1. Data
-a. Walmart.xlsx
-b. Target.xlsx
-c. Giant.xlsx
+  a. Walmart.xlsx
+  b. Target.xlsx
+  c. Giant.xlsx
+
 2. Scripts
-a. Analysis.ipynb
+  a. Analysis.ipynb
+
 3. Outputs
-a. Visualizations
-b. Multi-linear regression model
-c. Hyperparameter tuning
+  a. Visualizations
+  b. Multi-linear regression model
+  c. Hyperparameter tuning
+
 4. README.md
+
 III. Data Sources
-- Produced listings and prices exported from each retailer’s website in
-Spring 2025
-- Key columns across Walmart, Target, Giant datasets:
-o Product_url_link
-o Product_brand
-o Product_type
-o Product_price_per_unit
-o Product_price
+  - Produced listings and prices exported from each retailer’s website in Spring 2025
+  - Key columns across Walmart, Target, Giant datasets:
+      o Product_url_link
+      o Product_brand
+      o Product_type
+      o Product_price_per_unit
+      o Product_price
+
 IV. Main Processing Steps
-1. Load and clean Products Data
-• For each retailer (Walmart, Target, Giant), data from the
-groceries categories is loaded and cleaned in Excel
-• Standardize column names, units, and price formats; remove
-null or product brands irrelevant to the initial list
-2. Normalize unit prices
-• Convert all pricing to standard per-ounce in dollar format for
-fair comparison
-3. Fuzzy match products
-• Install thefuzz package and use thefuzz to identify samebranded, same quantity across retailers
-4. Statistical analysis
-• EDA
-• Linear regression
-• Hyperparameter tuning
-• Visualizations
+    1. Load and clean Products Data
+        • For each retailer (Walmart, Target, Giant), data from the groceries categories is loaded and cleaned in Excel
+        • Standardize column names, units, and price formats; remove null or product brands irrelevant to the initial list
+    2. Normalize unit prices
+        • Convert all pricing to standard per-ounce in dollar format for fair comparison
+    3. Fuzzy match products
+        • Install thefuzz package and use thefuzz to identify samebranded, same quantity across retailers
+    4. Statistical analysis
+        • EDA
+        • Linear regression
+        • Hyperparameter tuning
+        • Visualizations
+
 V. Installation/Requirements
-- Excel
-- Python language
-- Pandas, numpy, matplotlib, thefuzz, seaborn, sklearn.linear_model
+    - Excel
+    - Python language
+    - Pandas, numpy, matplotlib, thefuzz, seaborn, sklearn.linear_model
+
 VI. References
-- Cite sources: Walmart.com, Target.com, GiantFood.com
+    - Cite sources: Walmart.com, Target.com, GiantFood.com
